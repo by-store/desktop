@@ -30,8 +30,8 @@ export interface PosSettings {
 }
 
 export const DEFAULT_POS_SETTINGS: PosSettings = {
-  storeName: "ILuvBesi POS",
-  storeSubtitle: "Pusat Besi Hollow & Baja",
+  storeName: "by.store POS",
+  storeSubtitle: "Sistem Kasir & Manajemen Toko",
   storeAddress: "Jl. Raya Industri Baja No. 88",
   storePhone: "0812-3456-7890",
   bankName: "BCA",

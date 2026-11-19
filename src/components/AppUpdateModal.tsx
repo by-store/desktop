@@ -91,7 +91,7 @@ export default function AppUpdateModal({ onCheckingChange }: AppUpdateModalProps
             </span>
           </div>
           <p className="mt-1 text-xs text-slate-600">
-            Versi terbaru aplikasi ILoveBesi POS telah dirilis dengan perbaikan dan peningkatan fitur.
+            Versi terbaru aplikasi by.store POS telah dirilis dengan perbaikan dan peningkatan fitur.
           </p>
         </div>
 

@@ -94,14 +94,14 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         <div className="mb-6 border-b border-slate-200 pb-4">
           <div className="flex items-center justify-between">
             <span className="text-2xl font-bold tracking-tight text-slate-900">
-              ILuvBesi
+              by.store
             </span>
             <span className="rounded bg-blue-900 px-2.5 py-1 text-xs font-bold text-white">
               POS Desktop
             </span>
           </div>
           <p className="mt-1 text-xs font-medium text-slate-700">
-            Masuk Kasir POS Toko Besi
+            Masuk Kasir POS
           </p>
         </div>
 

@@ -200,7 +200,7 @@ export default function SettingsModal({
                     required
                     value={form.storeName}
                     onChange={(e) => setForm({ ...form, storeName: e.target.value })}
-                    placeholder="Contoh: ILuvBesi POS"
+                    placeholder="Contoh: by.store POS"
                     className="mt-1 h-10 w-full rounded border border-slate-300 bg-white px-3 text-xs font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-900"
                   />
                   <span className="text-[11px] text-slate-600">
