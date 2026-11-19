@@ -47,7 +47,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: tag,
-              name: 'ILoveBesi POS Desktop ' + tag,
+              name: 'by.store POS Desktop ' + tag,
               body: 'Rilis otomatis lintas platform aplikasi kasir desktop ILoveBesi untuk Linux (.rpm, .deb, .AppImage), Windows (.exe NSIS, .msi), dan macOS (.dmg Apple Silicon & Intel).',
               draft: true,
               prerelease: false,
@@ -144,13 +144,13 @@ jobs:
           APPIMAGE_FILE=$(find src-tauri/target -name "*.AppImage" | head -n 1)
 
           if [ -n "$RPM_FILE" ]; then
-            zip -j ILoveBesi-POS-Linux-RPM.zip "$RPM_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
+            zip -j by.store-POS-Linux-RPM.zip "$RPM_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
           fi
           if [ -n "$DEB_FILE" ]; then
-            zip -j ILoveBesi-POS-Linux-DEB.zip "$DEB_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
+            zip -j by.store-POS-Linux-DEB.zip "$DEB_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
           fi
           if [ -n "$APPIMAGE_FILE" ]; then
-            zip -j ILoveBesi-POS-Linux-AppImage.zip "$APPIMAGE_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
+            zip -j by.store-POS-Linux-AppImage.zip "$APPIMAGE_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
           fi
 
       - name: Package Windows Installer and Guide into ZIP
@@ -163,7 +163,7 @@ jobs:
           if ($exe) { Copy-Item $exe -Destination "win_pkg\" }
           if ($msi) { Copy-Item $msi -Destination "win_pkg\" }
           Copy-Item "PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt" -Destination "win_pkg\"
-          Compress-Archive -Path "win_pkg\*" -DestinationPath "ILoveBesi-POS-Windows-64bit.zip" -Force
+          Compress-Archive -Path "win_pkg\*" -DestinationPath "by.store-POS-Windows-64bit.zip" -Force
 
       - name: Package macOS Installer and Guide into ZIP
         if: matrix.platform == 'macos-latest'
@@ -171,9 +171,9 @@ jobs:
           DMG_FILE=$(find src-tauri/target -name "*.dmg" | head -n 1)
           if [ -n "$DMG_FILE" ]; then
             if [ "${{ matrix.target }}" = "aarch64-apple-darwin" ]; then
-              zip -j ILoveBesi-POS-macOS-Apple-Silicon.zip "$DMG_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
+              zip -j by.store-POS-macOS-Apple-Silicon.zip "$DMG_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
             else
-              zip -j ILoveBesi-POS-macOS-Intel.zip "$DMG_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
+              zip -j by.store-POS-macOS-Intel.zip "$DMG_FILE" PANDUAN-INSTALASI-DAN-PENGGUNAAN.txt
             fi
           fi
 

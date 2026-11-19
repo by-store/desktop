@@ -45,7 +45,7 @@ describe("formatThermalTextReceipt", () => {
 
   it("formats 80mm receipt with correct lines and totals", () => {
     const text = formatThermalTextReceipt(dummyDoc);
-    expect(text).toContain("ILUVBESI POS");
+    expect(text).toContain("BY.STORE POS");
     expect(text).toContain("NF-2610230001");
     expect(text).toContain("Hollow Galvanis 40x40 1.2mm");
     expect(text).toContain("500.000");
