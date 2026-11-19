@@ -185,7 +185,7 @@ jobs:
           TAG="${{ github.ref_name }}"
           CLOBBER_OPT=$(printf '%s%s' '-' '-clobber')
 
-          ZIP_FILES=$(ls ILoveBesi-POS-*.zip 2>/dev/null || true)
+          ZIP_FILES=$(ls by.store-POS-*.zip 2>/dev/null || true)
           if [ -n "$ZIP_FILES" ]; then
             echo "Mengunggah paket ZIP ke release: $ZIP_FILES"
             gh release upload "$TAG" $ZIP_FILES $CLOBBER_OPT
